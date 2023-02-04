@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="/assets/styles/index.css">
+</head>
+<body>
+    <p>Tic-Tac-Toe by Ninjagor</p>
+    <!-- Outline of the playing board -->
+    <div class="playing-board-outline">
+        <div class="verts">
+            <div class="vline"></div>
+            <div class="vline"></div>
+        </div>
+        <div class="horz">
+            <div class="hline"></div>
+            <div class="hline"></div>
+        </div>
+    </div>
+
+    <div class="playing-board">
+        <div class="box" id="a1"></div>
+        <div class="box" id="a2"></div>
+        <div class="box" id="a3"></div>
+        <div class="box" id="b1"></div>
+        <div class="box" id="b2"></div>
+        <div class="box" id="b3"></div>
+        <div class="box" id="c1"></div>
+        <div class="box" id="c2"></div>
+        <div class="box" id="c3"></div>
+    </div>
+
+    <div class="gameovermodal" id="gom">
+        <div class="modal">
+            <h1 id="gos">Draw</h1>
+            <button onclick="window.location.reload()">Play Again</button>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
