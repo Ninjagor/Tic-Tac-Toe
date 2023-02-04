@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+h3 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+div.playing-board-outline {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+}
+div.playing-board-outline .verts {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  justify-content: space-evenly;
+}
+div.playing-board-outline .verts .vline {
+  height: 100%;
+  width: 25px;
+  background: black;
+}
+div.playing-board-outline .horz {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-evenly;
+  height: 100%;
+}
+div.playing-board-outline .horz .hline {
+  width: 100%;
+  height: 25px;
+  background: black;
+}
+
+div.playing-board {
+  display: flex;
+  gap: 37px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  flex-wrap: wrap;
+}
+div.playing-board .box {
+  width: 175px;
+  height: 175px;
+  position: relative;
+}
+div.playing-board .box img {
+  width: 100%;
+  height: 100%;
+}
+div.playing-board .box:not(.selected):hover {
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+}
+
+div.gameovermodal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+div.gameovermodal .modal {
+  width: 700px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 1rem;
+}
+div.gameovermodal .modal h1 {
+  font-size: 5rem;
+}
+div.gameovermodal .modal button {
+  width: 300px;
+  height: 50px;
+  background-color: #4e89fd;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+}
+div.gameovermodal .modal button:hover {
+  box-shadow: 0 0 15px #4e89fd;
+}
+
+div.record {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 2px solid black;
+  padding: 0.2rem 1.5rem;
+  border-radius: 5px;
+}
+div.record button {
+  position: absolute;
+  top: calc(100% + 10px);
+  width: 100%;
+  left: 0;
+  height: 30px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+div.record button:hover {
+  background-color: #4e89fd;
+  color: white;
+  border: 2px solid #4e89fd;
+}
+
+.active {
+  pointer-events: all !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 610px) {
+  div.playing-board-outline, div.playing-board {
+    width: 450px;
+    height: 450px;
+  }
+  div.playing-board-outline .box, div.playing-board .box {
+    width: 125px;
+    height: 125px;
+  }
+}
+@media (max-width: 455px) {
+  div.playing-board-outline, div.playing-board {
+    width: 325px;
+    height: 325px;
+  }
+  div.playing-board-outline .box, div.playing-board .box {
+    width: 83px;
+    height: 83px;
+  }
+  .vline {
+    width: 15px !important;
+  }
+  .hline {
+    height: 15px !important;
+  }
+  h3 {
+    right: 10px;
+    left: auto;
+    top: 10px;
+  }
+}/*# sourceMappingURL=index.css.map */
