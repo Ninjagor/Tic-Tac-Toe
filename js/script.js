@@ -70,7 +70,7 @@ function opponentMove() {
     setTimeout(() => {
         let rand = map[Math.floor(Math.random() * map.length)]
     let move = document.getElementById(rand)
-    move.innerHTML += `<img src="o.png" alt="o">`
+    move.innerHTML += `<img src="./o.png" alt="o">`
     move.classList.add('selected')
     opponentBoxes.push(rand)
     let index = map.indexOf(rand);
@@ -124,7 +124,7 @@ document.querySelectorAll('.box').forEach((box) => {
                 console.log(map)
                 playerBoxes.push(box.id);
                 playerBoxes.sort()
-                box.innerHTML += `<img src="x.png" alt="x">`;
+                box.innerHTML += `<img src="./x.png" alt="x">`;
     
                 if (findIfMatch(playerBoxes)) {
                     console.log('Player Won!')
